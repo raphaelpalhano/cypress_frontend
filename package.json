@@ -20,13 +20,15 @@
     "faker-br": "^0.4.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^10.0.0",
+    "husky": "4.3",
     "jsonschema": "^1.4.0",
+    "lint-staged": "^12.3.4",
     "multiple-cucumber-html-reporter": "^1.18.0",
     "rimraf": "^3.0.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/support/steps", 
+    "step_definitions": "cypress/support/steps",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "reports/json"
