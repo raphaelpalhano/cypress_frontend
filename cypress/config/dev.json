@@ -1,0 +1,8 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "localhost:8080",
+  "env": {
+      "global_timeout": 30000,
+      "environment": "DEV"
+  }
+}
