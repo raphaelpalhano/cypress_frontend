@@ -48,6 +48,20 @@ And selecionar o filtro de ordenação
 ~~~
 <br>
 
+**background**: O background é a maneira de contextualizar os cenários. Se você observou que há muita repetição de algum step,
+ o background pode ser útil, para introduzir o contexto ao cenário. Nesse sentido, ele define os passos que vão ser feitos para
+ iniciar o cenário.
+ 
+
+  **Exemplo**
+  
+~~~gherkin
+      Background: Iniciar na página de exemplo
+      Given o acesso a plataforma
+~~~
+<br>
+
+
 **Case de uma loja**
 
 ~~~gherkin
