@@ -17,10 +17,16 @@
 const report = require('multiple-cucumber-html-reporter');
 const fs = require("fs")
 const path = require("path")
-const cucumberJsonDir = "reports/json"
-const screenshotsDir = "reports/screenshots/spec/"
-const jsonPath = path.join(__dirname, "../..", cucumberJsonDir)
-const screenshotsPath = path.join(__dirname, "../..", screenshotsDir)
+const pathreports = 'reports'
+const cucumberJsonDir = `${pathreports}/json`
+const screenshotsDir = `${pathreports}/screenshots/spec/` 
+if(!fs.existsSync(screenshotsDir)){
+    fs.mkdirSync(screenshotsDir, {
+        recursive: true
+    })
+}
+const jsonPath = path.join(__dirname, "../../../", cucumberJsonDir)
+const screenshotsPath = path.join(__dirname, "../../../", screenshotsDir)
 const files = fs.readdirSync(jsonPath)
 const jsonNames = {}
 const cukeMap = {}
@@ -36,9 +42,6 @@ files.forEach(file => {
     featureToFileMap[feature] = file
 })
 
-if(!fs.existsSync(screenshotsPath)){
-    fs.mkdirSync(screenshotsPath)
-}
 
 const failingFeatures = fs.readdirSync(path.join(screenshotsPath))
 failingFeatures.forEach(feature => {

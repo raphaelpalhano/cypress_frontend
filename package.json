@@ -7,8 +7,8 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:tags": "cypress-tags run -e",
-    "cy:report": "node ./cypress/support/reporter.js",
-    "cy:clear": "node ./cypress/support/clear.js",
+    "cy:report": "node ./cypress/support/report/reporter.js",
+    "cy:clear": "node ./cypress/support/report/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
