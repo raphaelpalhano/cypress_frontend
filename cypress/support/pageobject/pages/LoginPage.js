@@ -11,13 +11,13 @@ export class LoginPage extends BasePage{
 
     static preencher_campos(user_type){
      
-        super.typeValue(LoginElement.input('username'), user_type)
-        super.typeValue(LoginElement.input('password'), 'secret_sauce')
+        super.typeValue(LoginElement.INPUT('username'), user_type)
+        super.typeValue(LoginElement.INPUT('password'), 'secret_sauce')
         
     
     }
 
     static clicar_no_botao(){
-        super.clickOnElement(LoginElement.button('login-button'))
+        super.clickOnElement(LoginElement.BUTTON('login-button'))
     }
 }
