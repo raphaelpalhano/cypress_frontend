@@ -27,7 +27,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 627000000
+              "duration": 682000000
             }
           },
           {
@@ -36,9 +36,8 @@
             "line": 10,
             "name": "efetue login com \"standard_user\"",
             "result": {
-              "status": "failed",
-              "duration": 193000000,
-              "error_message": "TypeError: _LoginElement.LoginElement.input is not a function\n    at Function.preencher_campos (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:503:131)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:609:24)\n    at Context.resolveAndRunStepDefinition (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:11192:29)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:10513:35)"
+              "status": "passed",
+              "duration": 755000000
             }
           },
           {
@@ -47,7 +46,8 @@
             "line": 11,
             "name": "filtrar os produtos por \"Price (high to low)\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 167000000
             }
           },
           {
@@ -56,7 +56,8 @@
             "line": 12,
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Fleece Jacket\" e preço \"$49.99\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 68000000
             }
           }
         ]
@@ -81,7 +82,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 149000000
+              "duration": 410000000
             }
           },
           {
@@ -90,8 +91,8 @@
             "line": 10,
             "name": "efetue login com \"standard_user\"",
             "result": {
-              "status": "failed",
-              "error_message": "TypeError: _LoginElement.LoginElement.input is not a function\n    at Function.preencher_campos (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:503:131)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:609:24)\n    at Context.resolveAndRunStepDefinition (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:11192:29)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:10513:35)"
+              "status": "passed",
+              "duration": 869000000
             }
           },
           {
@@ -100,7 +101,8 @@
             "line": 11,
             "name": "filtrar os produtos por \"Price (low to high)\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 168000000
             }
           },
           {
@@ -109,7 +111,8 @@
             "line": 12,
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Onesie\" e preço \"$7.99\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 31000000
             }
           }
         ]
@@ -134,7 +137,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 113000000
+              "duration": 329000000
             }
           },
           {
@@ -143,8 +146,8 @@
             "line": 10,
             "name": "efetue login com \"standard_user\"",
             "result": {
-              "status": "failed",
-              "error_message": "TypeError: _LoginElement.LoginElement.input is not a function\n    at Function.preencher_campos (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:503:131)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:609:24)\n    at Context.resolveAndRunStepDefinition (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:11192:29)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:10513:35)"
+              "status": "passed",
+              "duration": 715000000
             }
           },
           {
@@ -153,7 +156,8 @@
             "line": 11,
             "name": "filtrar os produtos por \"Name (A to Z)\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 158000000
             }
           },
           {
@@ -162,7 +166,8 @@
             "line": 12,
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Backpack\" e preço \"$29.99\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 30000000
             }
           }
         ]
@@ -187,7 +192,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 99000000
+              "duration": 228000000
             }
           },
           {
@@ -196,8 +201,8 @@
             "line": 10,
             "name": "efetue login com \"standard_user\"",
             "result": {
-              "status": "failed",
-              "error_message": "TypeError: _LoginElement.LoginElement.input is not a function\n    at Function.preencher_campos (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:503:131)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:609:24)\n    at Context.resolveAndRunStepDefinition (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:11192:29)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\spec\\Filtrando_produtos.feature:10513:35)"
+              "status": "passed",
+              "duration": 760000000
             }
           },
           {
@@ -206,7 +211,8 @@
             "line": 11,
             "name": "filtrar os produtos por \"Name (Z to A)\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 266000000
             }
           },
           {
@@ -215,7 +221,8 @@
             "line": 12,
             "name": "deverá ser mostrado o primeiro produto com nome \"Test.allTheThings() T-Shirt (Red)\" e preço \"$15.99\"",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 25000000
             }
           }
         ]

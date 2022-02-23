@@ -1,11 +1,11 @@
 export class LoginElement{
 
     static INPUT(campValue){
-         `[data-test=${campValue}]`
+         return `[data-test=${campValue}]`
     }
 
     static BUTTON(campValue){
-        `[data-test=${campValue}]`
+       return `[data-test=${campValue}]`
     }
     
     
