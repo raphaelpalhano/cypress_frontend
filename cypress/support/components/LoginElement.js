@@ -1,15 +1,12 @@
 export class LoginElement{
 
-    function(){
-        text = {
+    static INPUT(campValue){
+         `[data-test=${campValue}]`
+    }
 
-        }
-    } 
-
-    static input = (campValue) => `[data-test=${campValue}]`
-
-    static button = (campValue) => `[data-test=${campValue}]`
-
+    static BUTTON(campValue){
+        `[data-test=${campValue}]`
+    }
     
     
 }

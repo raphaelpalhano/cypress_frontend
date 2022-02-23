@@ -9,7 +9,7 @@
     "cy:tags": "cypress-tags run -e",
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "keywords": [],
   "author": "Leonardo Kartabil",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "cypress": "^8.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "faker-br": "^0.4.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^10.0.0",
@@ -24,6 +25,7 @@
     "jsonschema": "^1.4.0",
     "lint-staged": "^12.3.4",
     "multiple-cucumber-html-reporter": "^1.18.0",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.2"
   },
   "cypress-cucumber-preprocessor": {

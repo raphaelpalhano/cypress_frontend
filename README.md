@@ -196,3 +196,13 @@ export class LoginPage extends BasePage{
  **ponto importante**: 
  - "step_definitions": esse atributo irá definir onde estão os steps do projeto, que executam o arquivo em gherkin.
  - se você colocou o nome da pasta steps, os arquivos dentro dela terão que terminar com o {nome-do-arquivo}steps.js
+
+
+# Eslint Cypress
+
+
+### Aplicando boas práticas com o eslint
+
+**Fonte**:[eslint-plugin](https://github.com/cypress-io/eslint-plugin-cypress)
+
+**Run** `npm run lint`
