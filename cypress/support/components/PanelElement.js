@@ -1,11 +1,11 @@
 export class PanelElement{
 
     static SELECTFILTER(){ 
-         `[data-test=product_sort_container]`
+        return `[data-test=product_sort_container]`
     };
 
 
     static  ARRPRODUCTS(){
-         `.inventory_list .inventory_item`
+        return `.inventory_list .inventory_item`
     }
 }
