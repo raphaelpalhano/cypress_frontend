@@ -15,18 +15,13 @@
   "author": "Leonardo Kartabil",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.7.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint-plugin-cypress": "^2.12.1",
-    "faker-br": "^0.4.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^10.0.0",
     "husky": "4.3",
-    "jsonschema": "^1.4.0",
     "lint-staged": "^12.3.4",
     "multiple-cucumber-html-reporter": "^1.18.0",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.2"
+    "prettier": "^1.19.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
@@ -35,5 +30,12 @@
       "generate": true,
       "outputFolder": "reports/json"
     }
+  },
+  "dependencies": {
+    "cypress": "^9.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "faker-br": "^0.4.1",
+    "jsonschema": "^1.4.0",
+    "rimraf": "^3.0.2"
   }
 }

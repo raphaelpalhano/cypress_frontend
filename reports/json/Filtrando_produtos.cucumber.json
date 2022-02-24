@@ -27,7 +27,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 682000000
+              "duration": 602000000
             }
           },
           {
@@ -37,7 +37,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 755000000
+              "duration": 712000000
             }
           },
           {
@@ -47,7 +47,7 @@
             "name": "filtrar os produtos por \"Price (high to low)\"",
             "result": {
               "status": "passed",
-              "duration": 167000000
+              "duration": 163000000
             }
           },
           {
@@ -57,7 +57,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Fleece Jacket\" e preço \"$49.99\"",
             "result": {
               "status": "passed",
-              "duration": 68000000
+              "duration": 36000000
             }
           }
         ]
@@ -82,7 +82,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 410000000
+              "duration": 453000000
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 869000000
+              "duration": 731000000
             }
           },
           {
@@ -102,7 +102,7 @@
             "name": "filtrar os produtos por \"Price (low to high)\"",
             "result": {
               "status": "passed",
-              "duration": 168000000
+              "duration": 161000000
             }
           },
           {
@@ -112,7 +112,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Onesie\" e preço \"$7.99\"",
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 37000000
             }
           }
         ]
@@ -137,7 +137,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 329000000
+              "duration": 306000000
             }
           },
           {
@@ -147,7 +147,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 715000000
+              "duration": 683000000
             }
           },
           {
@@ -167,7 +167,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Backpack\" e preço \"$29.99\"",
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 29000000
             }
           }
         ]
@@ -192,7 +192,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 228000000
+              "duration": 380000000
             }
           },
           {
@@ -202,7 +202,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 760000000
+              "duration": 751000000
             }
           },
           {
@@ -212,7 +212,7 @@
             "name": "filtrar os produtos por \"Name (Z to A)\"",
             "result": {
               "status": "passed",
-              "duration": 266000000
+              "duration": 207000000
             }
           },
           {
@@ -222,7 +222,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Test.allTheThings() T-Shirt (Red)\" e preço \"$15.99\"",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 24000000
             }
           }
         ]
