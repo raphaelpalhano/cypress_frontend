@@ -27,7 +27,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 602000000
+              "duration": 948000000
             }
           },
           {
@@ -37,7 +37,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 712000000
+              "duration": 693000000
             }
           },
           {
@@ -47,7 +47,7 @@
             "name": "filtrar os produtos por \"Price (high to low)\"",
             "result": {
               "status": "passed",
-              "duration": 163000000
+              "duration": 160000000
             }
           },
           {
@@ -57,7 +57,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Fleece Jacket\" e preço \"$49.99\"",
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 29000000
             }
           }
         ]
@@ -82,7 +82,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 453000000
+              "duration": 376000000
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 731000000
+              "duration": 691000000
             }
           },
           {
@@ -102,7 +102,7 @@
             "name": "filtrar os produtos por \"Price (low to high)\"",
             "result": {
               "status": "passed",
-              "duration": 161000000
+              "duration": 146000000
             }
           },
           {
@@ -112,7 +112,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Onesie\" e preço \"$7.99\"",
             "result": {
               "status": "passed",
-              "duration": 37000000
+              "duration": 40000000
             }
           }
         ]
@@ -137,7 +137,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 306000000
+              "duration": 379000000
             }
           },
           {
@@ -147,7 +147,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 683000000
+              "duration": 662000000
             }
           },
           {
@@ -157,7 +157,7 @@
             "name": "filtrar os produtos por \"Name (A to Z)\"",
             "result": {
               "status": "passed",
-              "duration": 158000000
+              "duration": 145000000
             }
           },
           {
@@ -167,7 +167,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Backpack\" e preço \"$29.99\"",
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 28000000
             }
           }
         ]
@@ -192,7 +192,7 @@
             "name": "o acesso a plataforma",
             "result": {
               "status": "passed",
-              "duration": 380000000
+              "duration": 298000000
             }
           },
           {
@@ -202,7 +202,7 @@
             "name": "efetue login com \"standard_user\"",
             "result": {
               "status": "passed",
-              "duration": 751000000
+              "duration": 671000000
             }
           },
           {
@@ -212,7 +212,7 @@
             "name": "filtrar os produtos por \"Name (Z to A)\"",
             "result": {
               "status": "passed",
-              "duration": 207000000
+              "duration": 155000000
             }
           },
           {
@@ -222,7 +222,7 @@
             "name": "deverá ser mostrado o primeiro produto com nome \"Test.allTheThings() T-Shirt (Red)\" e preço \"$15.99\"",
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 21000000
             }
           }
         ]

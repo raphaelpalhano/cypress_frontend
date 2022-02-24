@@ -12,13 +12,13 @@ Before({ tags: "@tag"}, () => {
 	console.log("before scenarios with tag '@tag'")
 })
 
-Given(`o acesso a plataforma`, () => {
+Given('o acesso a plataforma', () => {
 	LoginPage.acessar_sauce_demo();
 	
 });
 
 
-And(`efetue login com {string}`, (user_type) => {
+And("efetue login com {string}", (user_type) => {
 	LoginPage.preencher_campos(user_type);
 	LoginPage.clicar_no_botao()
 });

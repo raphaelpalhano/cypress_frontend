@@ -84,6 +84,11 @@ And selecionar o filtro de ordenação
       se o nome da pasta é steps, o arquivo deve ter steps também.
     - Cada arquivo steps está integrado ao pageObject: loginSteps; panelSteps
 
+**Padronização:**
+
+`Aspas duplas:` para textos com parâmetros
+`Aspas simples:` textos sem parâmetro
+
 ~~~javascript
 import 
 import {Before, Given, And} from 'cypress-cucumber-preprocessor/steps'
