@@ -9,7 +9,8 @@
     "cy:tags": "cypress-tags run -e",
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
-    "lint": "eslint --fix --ext .js,.jsx ."
+    "lint": "eslint --fix --ext .js,.jsx,.ts .",
+    "code:prettier": "prettier --check \"**/*.js*\""
   },
   "keywords": [],
   "author": "Leonardo Kartabil",

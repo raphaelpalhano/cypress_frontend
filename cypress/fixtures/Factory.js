@@ -5,25 +5,25 @@ export class Factory {
 
     static getUserToLogin(login_type){
         switch (login_type) {
-          case 'admin':
+        case 'admin':
             return {
-                "email": "fulano@qa.com",
-                "password": "teste"
+                'email': 'fulano@qa.com',
+                'password': 'teste'
             }
-          case 'valid':
-              return{
-                  "email": "angeloAro",
-                  "password": "1saza"
-              }  
-          case 'empty':
+        case 'valid':
+            return{
+                'email': 'angeloAro',
+                'password': '1saza'
+            }  
+        case 'empty':
             return {
-              "email": "",
-              "password": ""
+                'email': '',
+                'password': ''
             }
-          case 'invalid':
+        case 'invalid':
             return {
-              "email": faker.internet.email(),
-              "password": faker.internet.password()
+                'email': faker.internet.email(),
+                'password': faker.internet.password()
             }
         }
     }
@@ -31,36 +31,36 @@ export class Factory {
 
     static getUser(type){
         switch (type) {
-            case 'admin':
-                return {
-                    "nome": "Fulano",
-                    "email": "fulano@qa.com",
-                    "password": "teste",
-                    "administrador": "true"
-                }
-            case 'valid':
-                return {
-                    "nome": faker.name.findName(),
-                    "email": faker.internet.email(),
-                    "password": faker.internet.password(),
-                    "administrador": admin.toString(),
-                }
-            case 'invalid':
-                return {
-                    "nome": "Fulano da Silva",
-                    "email": "beltrano@qa.com.br",
-                    "password": "teste",
-                    "administrador": "true"
-                }
-            case 'empty':
-                return {
-                    "nome": "",
-                    "email": "",
-                    "password": "",
-                    "administrador": admin.toString()
-                }
-            default:
-                return { notfound:"O usuário não foi encontrado, verifique o tipo passado!" }
+        case 'admin':
+            return {
+                'nome': 'Fulano',
+                'email': 'fulano@qa.com',
+                'password': 'teste',
+                'administrador': 'true'
+            }
+        case 'valid':
+            return {
+                'nome': faker.name.findName(),
+                'email': faker.internet.email(),
+                'password': faker.internet.password(),
+                'administrador': admin.toString(),
+            }
+        case 'invalid':
+            return {
+                'nome': 'Fulano da Silva',
+                'email': 'beltrano@qa.com.br',
+                'password': 'teste',
+                'administrador': 'true'
+            }
+        case 'empty':
+            return {
+                'nome': '',
+                'email': '',
+                'password': '',
+                'administrador': admin.toString()
+            }
+        default:
+            return { notfound:'O usuário não foi encontrado, verifique o tipo passado!' }
         }
     }
 }

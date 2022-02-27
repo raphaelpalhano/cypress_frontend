@@ -17,7 +17,24 @@
         "cypress/assertion-before-screenshot": "warn",
         "cypress/no-force": "warn",
         "cypress/no-async-tests": "error",
-        "cypress/no-pause": "error"
+        "cypress/no-pause": "error",
+        "no-console": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 130
+          }
+        ],
+        "indent": [
+          "error",
+          4
+        ],
+        "quotes": [
+           "error" ,  
+           "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  } 
+          ] 
+        
+        
       }
       
 }

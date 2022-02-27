@@ -1,5 +1,5 @@
-var rimraf = require("rimraf");
+var rimraf = require('rimraf');
 
-rimraf.sync("reports/json/*");
-rimraf.sync("reports/html/*");
-rimraf.sync("reports/screenshots/spec/*")
+rimraf.sync('reports/json/*');
+rimraf.sync('reports/html/*');
+rimraf.sync('reports/screenshots/spec/*')
