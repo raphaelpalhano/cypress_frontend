@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './utils/fileManager.js'
+import './utils/fileManager.js';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

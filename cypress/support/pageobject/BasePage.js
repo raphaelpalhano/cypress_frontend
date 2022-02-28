@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 export default class BasePage {
-  
+
     static getElement(element, index = undefined) {
         let elem;
         if (typeof index !== 'undefined' || index > 0) {
@@ -75,7 +75,7 @@ export default class BasePage {
     }
 
     static verifyIfElementIsHidden(element) {
-    
+
         this.getElement(element).should('not.be.visible', { timeout: Cypress.env('global_timeout') });
     }
 
@@ -85,30 +85,30 @@ export default class BasePage {
         }catch(error){
             throw new Error(`element not be visible. ${error.message}`);
         }
-    
+
     }
 
     static validateFirstElementOfArray(array, value) {
-        cy.get(array).first().should('contain', value)
+        cy.get(array).first().should('contain', value);
     }
 
     static async clickInListOfElements(elementList){
         await cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each($el => {
             cy.wrap($el).click();
-        })
+        });
     }
 
     static async getListOfTextsElements(elementList, listname){
         let texts = new Array();
         await cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each($el => {
             texts.push(cy.wrap($el).invoke('text'));
-        })
+        });
         if(listname){
             Cypress.env(listname, texts);
         }
 
         return texts;
     }
-  
+
 }
 

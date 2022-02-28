@@ -2,7 +2,7 @@
     "plugins": [
       "cypress"
     ],
-    
+
     "extends": [
         "plugin:cypress/recommended"
     ],
@@ -30,11 +30,12 @@
           4
         ],
         "quotes": [
-           "error" ,  
-           "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  } 
-          ] 
-        
-        
+           "error" ,
+           "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  }
+          ],
+        "semi": [2, "always"]
+
+
       }
-      
+
 }
