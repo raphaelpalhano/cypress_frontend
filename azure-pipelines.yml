@@ -1,23 +1,27 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - master
 
 pool:
   vmImage: ubuntu-latest
 
-stages:
-- stage: Scenarios_front
-  jobs:
-  - job: testScenarios
-    steps:
-      - script: |
-         npm ci
-        displayName: 'Setup' 
-      - script: |
-          npm run cy:run
-        displayName: 'Run tests' 
-  
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm ci
+  displayName: 'Install Dependencies'
+- script: |
+    npm run cy:run
+  continueOnError: true
+  displayName: 'Run Tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/reports/junit'
+    mergeTestResults: true
+    testRunTitle: 'Publish Test Results'

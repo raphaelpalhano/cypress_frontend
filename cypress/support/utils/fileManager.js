@@ -1,11 +1,11 @@
 Cypress.Commands.add('generateFixture', (fileName,numTimes) => {
-    const faker = require('faker-br')
-    const increment = 0
+    const faker = require('faker-br');
+    const increment = 0;
 
     cy.writeFile(`cypress/fixtures/${fileName}.json`, {
         'hits':Cypress._.times(numTimes, () => {
             if(increment >= numTimes){
-                return dynamicData
+                return dynamicData;
             }  
         
             let dynamicData = {
@@ -15,12 +15,12 @@ Cypress.Commands.add('generateFixture', (fileName,numTimes) => {
                 'num_comments':`${faker.datatype.number()}`,
                 'points':`${faker.datatype.number()}`,
                 'objectID':`${faker.datatype.uuid()}`,
-            }
+            };
             increment++;
         })
 
-    })
-})
+    });
+});
 
 
 
