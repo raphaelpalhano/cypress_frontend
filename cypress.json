@@ -7,5 +7,10 @@
     "numTestsKeptInMemory": 5,
     "ignoreTestFiles": "*.js",
     "testFiles": ["**/*.{feature, features}"],
-    "screenshotsFolder": "reports/screenshots"
+    "screenshotsFolder": "reports/screenshots",
+    "reporter": "mocha-junit-reporter",
+    "reporterOptions": {
+    "mochaFile": "./reports/junit/test-results.[hash].xml",
+    "testsuitesTitle": false
+    }
 }
