@@ -9,7 +9,7 @@ import {LoginPage} from '../pageobject/pages/LoginPage';
  */
 
 Before({ tags: '@tag'}, () => {
-    console.log('before scenarios with tag \'@tag\'');
+    console.log(`before scenarios with tag '@tag'`);
 });
 
 Given('o acesso a plataforma', () => {
