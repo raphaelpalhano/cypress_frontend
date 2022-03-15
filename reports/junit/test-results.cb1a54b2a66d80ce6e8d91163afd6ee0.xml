@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.9430" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-03-03T22:56:09" tests="0" file="cypress/integration/spec/Filtrando_produtos.feature" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Filtrar produtos pelo nome e preços" timestamp="2022-03-03T22:56:09" tests="4" time="4.9350" failures="0">
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #1)" time="1.6150" classname="Filtrar produtos no painel de produtos (example #1)">
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #2)" time="0.9980" classname="Filtrar produtos no painel de produtos (example #2)">
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #3)" time="1.0030" classname="Filtrar produtos no painel de produtos (example #3)">
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #4)" time="1.2450" classname="Filtrar produtos no painel de produtos (example #4)">
+    </testcase>
+  </testsuite>
+</testsuites>

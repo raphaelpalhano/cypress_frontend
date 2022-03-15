@@ -92,19 +92,38 @@ export default class BasePage {
         cy.get(array).first().should('contain', value);
     }
 
-    static async clickInListOfElements(elementList){
-        await cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each($el => {
+    static clickInAllElementsInList(elementList){
+        cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each($el => {
             cy.wrap($el).click();
         });
     }
 
-    static async getListOfTextsElements(elementList, listname){
+    static clickInOneElementInList(elementList, value){
+        cy.get(elementList).should('be.visible', { timeout: Cypress.env('global_timeout')}).each($el => {
+            if(cy.wrap($el).should('contain', value)){
+                cy.get($el).click();
+
+            };
+        });
+    }
+
+
+    static typeForm(element, inputElements, values){
+        cy.get(element).should('be.visible', { timeout: Cypress.env('global_timeout')}).within(($form => {
+            inputElements.forEach($el => {
+                cy.get($el).type(cy.wrap(values).each($v));
+            });
+
+        }));
+    }
+
+    static getListOfTextsElements(elementList, nameEnvList){
         let texts = new Array();
-        await cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each($el => {
+        cy.get(elementList).should('contain.html', { timeout: Cypress.env('global_timeout')}).each($el => {
             texts.push(cy.wrap($el).invoke('text'));
         });
-        if(listname){
-            Cypress.env(listname, texts);
+        if(nameEnvList){
+            Cypress.env(nameEnvList, texts);
         }
 
         return texts;
