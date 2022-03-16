@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.4360" tests="4" failures="3">
+  <testsuite name="Root Suite" timestamp="2022-03-16T19:41:44" tests="0" file="cypress/integration/spec/Filtrando_produtos.feature" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Filtrar produtos pelo nome e preços" timestamp="2022-03-16T19:41:44" tests="4" time="13.4270" failures="3">
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #1)" time="2.3260" classname="Filtrar produtos no painel de produtos (example #1)">
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #2)" time="1.3230" classname="Filtrar produtos no painel de produtos (example #2)">
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #3)" time="1.3440" classname="Filtrar produtos no painel de produtos (example #3)">
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços Filtrar produtos no painel de produtos (example #4)" time="0.0000" classname="Filtrar produtos no painel de produtos (example #4)">
+      <failure message="Permission denied to access property &quot;document&quot; on cross-origin object" type="SecurityError"><![CDATA[SecurityError: Permission denied to access property "document" on cross-origin object
+setWindowDocumentProps@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:172661:3
+../driver/src/cypress/cy.ts/initialize/<@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:173031:31
+dispatch@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:113217:27
+../driver/node_modules/jquery/dist/jquery.js/</add/elemData.handle@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:113025:28
+]]></failure>
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços &quot;after each&quot; hook for &quot;Filtrar produtos no painel de produtos (example #4)&quot;" time="0.0000" classname="&quot;after each&quot; hook for &quot;Filtrar produtos no painel de produtos (example #4)&quot;">
+      <failure message="Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Filtrar produtos pelo nome ...`" type="CypressError"><![CDATA[CypressError: Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Filtrar produtos pelo nome ...`
+cypressErr@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:176254:18
+errByPath@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:176323:10
+../driver/src/cypress/mocha.ts/patchRunnableResetTimeout/Runnable.prototype.resetTimeout/this.timer<@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:178083:80
+]]></failure>
+    </testcase>
+    <testcase name="Filtrar produtos pelo nome e preços &quot;after all&quot; hook for &quot;Filtrar produtos no painel de produtos (example #4)&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;Filtrar produtos no painel de produtos (example #4)&quot;">
+      <failure message="Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Filtrar produtos pelo nome ...`" type="CypressError"><![CDATA[CypressError: Cypress command timeout of `4000ms` exceeded.
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Filtrar produtos pelo nome ...`
+cypressErr@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:176254:18
+errByPath@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:176323:10
+../driver/src/cypress/mocha.ts/patchRunnableResetTimeout/Runnable.prototype.resetTimeout/this.timer<@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:178083:80
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

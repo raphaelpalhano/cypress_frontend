@@ -26,8 +26,9 @@
             "line": 7,
             "name": "o acesso a plataforma",
             "result": {
-              "status": "passed",
-              "duration": 836000000
+              "status": "failed",
+              "duration": 5817000000,
+              "error_message": "CypressError: Cypress command timeout of `4000ms` exceeded.\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Filtrar produtos pelo nome ...`\ncypressErr@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:176254:18\nerrByPath@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:176323:10\n../driver/src/cypress/mocha.ts/patchRunnableResetTimeout/Runnable.prototype.resetTimeout/this.timer<@https://www.saucedemo.com/__cypress/runner/cypress_runner.js:178083:80\n"
             }
           },
           {
@@ -36,8 +37,7 @@
             "line": 13,
             "name": "efetue login com \"standard_user\"",
             "result": {
-              "status": "passed",
-              "duration": 836000000
+              "status": "skipped"
             }
           },
           {
@@ -46,8 +46,7 @@
             "line": 14,
             "name": "filtrar os produtos por \"Price (high to low)\"",
             "result": {
-              "status": "passed",
-              "duration": 178000000
+              "status": "skipped"
             }
           },
           {
@@ -56,173 +55,7 @@
             "line": 15,
             "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Fleece Jacket\" e preço \"$49.99\"",
             "result": {
-              "status": "passed",
-              "duration": 57000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "filtrar-produtos-pelo-nome-e-preços;filtrar-produtos-no-painel-de-produtos",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "Filtrar produtos no painel de produtos",
-        "tags": [
-          {
-            "name": "@test",
-            "line": 11
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "o acesso a plataforma",
-            "result": {
-              "status": "passed",
-              "duration": 428000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 13,
-            "name": "efetue login com \"standard_user\"",
-            "result": {
-              "status": "passed",
-              "duration": 811000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "filtrar os produtos por \"Price (low to high)\"",
-            "result": {
-              "status": "passed",
-              "duration": 189000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Onesie\" e preço \"$7.99\"",
-            "result": {
-              "status": "passed",
-              "duration": 76000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "filtrar-produtos-pelo-nome-e-preços;filtrar-produtos-no-painel-de-produtos",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Filtrar produtos no painel de produtos",
-        "tags": [
-          {
-            "name": "@test",
-            "line": 11
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "o acesso a plataforma",
-            "result": {
-              "status": "passed",
-              "duration": 774000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 13,
-            "name": "efetue login com \"standard_user\"",
-            "result": {
-              "status": "passed",
-              "duration": 787000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "filtrar os produtos por \"Name (A to Z)\"",
-            "result": {
-              "status": "passed",
-              "duration": 154000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "deverá ser mostrado o primeiro produto com nome \"Sauce Labs Backpack\" e preço \"$29.99\"",
-            "result": {
-              "status": "passed",
-              "duration": 42000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "filtrar-produtos-pelo-nome-e-preços;filtrar-produtos-no-painel-de-produtos",
-        "keyword": "Scenario",
-        "line": 21,
-        "name": "Filtrar produtos no painel de produtos",
-        "tags": [
-          {
-            "name": "@test",
-            "line": 11
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "o acesso a plataforma",
-            "result": {
-              "status": "passed",
-              "duration": 250000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 13,
-            "name": "efetue login com \"standard_user\"",
-            "result": {
-              "status": "passed",
-              "duration": 768000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "filtrar os produtos por \"Name (Z to A)\"",
-            "result": {
-              "status": "passed",
-              "duration": 201000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "deverá ser mostrado o primeiro produto com nome \"Test.allTheThings() T-Shirt (Red)\" e preço \"$15.99\"",
-            "result": {
-              "status": "passed",
-              "duration": 44000000
+              "status": "skipped"
             }
           }
         ]

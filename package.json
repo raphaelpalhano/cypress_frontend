@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cy:firefox": "cypress run --browser firefox",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:tags": "cypress-tags run -e",
@@ -16,6 +17,7 @@
   "author": "Leonardo Kartabil",
   "license": "ISC",
   "devDependencies": {
+    "cypress-localstorage-commands": "^1.7.0",
     "cypress-multi-reporters": "^1.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "fs": "^0.0.1-security",

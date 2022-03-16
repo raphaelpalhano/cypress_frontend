@@ -4,6 +4,7 @@
     "viewportWidth": 1600,
     "viewportHeight": 900,
     "chromeWebSecurity": false,
+    "firefoxWebSecurity": false,
     "numTestsKeptInMemory": 5,
     "ignoreTestFiles": "*.js",
     "testFiles": ["**/*.{feature, features}"],
