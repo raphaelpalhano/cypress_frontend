@@ -2,11 +2,12 @@
 
 # Estrutura do framework
 
-## 1. Integration/spec/.feature:Gherkin
- 
- <p align="center">
+<p align="center">
     <img src="workflow/flow_frontend.drawio.png" alt="imagem nao existe">
  </p>
+
+
+## 1. Integration/spec/.feature:Gherkin
  
 ### **Padrão do Gherkin**  
 
