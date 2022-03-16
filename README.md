@@ -4,6 +4,10 @@
 
 ## 1. Integration/spec/.feature:Gherkin
  
+ <p align="center">
+    <img src="workflow/flow_frontend.drawio.png" height="300" width="460" alt="imagem nao existe">
+ </p>
+ 
 ### **Padrão do Gherkin**  
 
   **Given**: Pré-condição, descreve o contexto inicial do cenário, 
