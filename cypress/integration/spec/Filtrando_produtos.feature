@@ -1,9 +1,12 @@
 Feature: Filtrar produtos pelo nome e preços
 
-   
+
+
+
     Background: Iniciar na página de exemplo
       Given o acesso a plataforma
-       
+
+
 
      @test
     Scenario Outline: Filtrar produtos no painel de produtos
@@ -16,10 +19,8 @@ Feature: Filtrar produtos pelo nome e preços
         | Price (low to high) | lohi  | Sauce Labs Onesie                 | $7.99  |
         | Name (A to Z)       | az    | Sauce Labs Backpack               | $29.99 |
         | Name (Z to A)       | za    | Test.allTheThings() T-Shirt (Red) | $15.99 |
-    
 
-    
 
 # Dado ou Given == Pré requisito
 # Quando ou When == Ações
-# Então ou Then == validações das ações 
+# Então ou Then == validações das ações

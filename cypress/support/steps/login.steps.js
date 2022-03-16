@@ -9,16 +9,16 @@ import {LoginPage} from '../pageobject/pages/LoginPage';
  */
 
 Before({ tags: '@tag'}, () => {
-    console.log(`before scenarios with tag '@tag'`);
+  console.log(`before scenarios with tag '@tag'`);
 });
 
 Given('o acesso a plataforma', () => {
-    LoginPage.acessar_sauce_demo();
+  LoginPage.acessarSauceDemo();
 
 });
 
 
 And('efetue login com {string}', (user_type) => {
-    LoginPage.preencher_campos(user_type);
-    LoginPage.clicar_no_botao();
+  LoginPage.preencherCampos(user_type);
+  LoginPage.clicarNoBotao();
 });

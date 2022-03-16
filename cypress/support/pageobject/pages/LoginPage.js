@@ -4,20 +4,20 @@ import {LoginElement} from '../../components/LoginElement';
 
 export class LoginPage extends BasePage{
 
-    static acessar_sauce_demo(){
-        cy.visit('/');
-    }
+  static acessarSauceDemo(){
+    cy.visit('/');
+  }
 
 
-    static preencher_campos(user_type){
+  static preencherCampos(user_type){
 
-        super.typeValue(LoginElement.INPUT('username'), user_type);
-        super.typeValue(LoginElement.INPUT('password'), 'secret_sauce');
+    super.typeValue(LoginElement.INPUT('username'), user_type);
+    super.typeValue(LoginElement.INPUT('password'), 'secret_sauce');
 
 
-    }
+  }
 
-    static clicar_no_botao(){
-        super.clickOnElement(LoginElement.BUTTON('login-button'));
-    }
+  static clicarNoBotao(){
+    super.clickOnElement(LoginElement.BUTTON('login-button'));
+  }
 }
