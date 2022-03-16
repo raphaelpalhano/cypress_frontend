@@ -26,9 +26,9 @@ const pathreports = 'reports';
 const cucumberJsonDir = `${pathreports}/json`;
 const screenshotsDir = `${pathreports}/screenshots/spec/`; 
 if(!fs.existsSync(screenshotsDir)){
-    fs.mkdirSync(screenshotsDir, {
-        recursive: true
-    });
+  fs.mkdirSync(screenshotsDir, {
+    recursive: true
+  });
 }
 const jsonPath = path.join(__dirname, '../../../', cucumberJsonDir);
 const screenshotsPath = path.join(__dirname, '../../../', screenshotsDir);
@@ -38,54 +38,54 @@ const cukeMap = {};
 const featureToFileMap = {};
 
 files.forEach(file => {
-    const json = JSON.parse(
-        fs.readFileSync(path.join(jsonPath, file)).toString()
-    );
-    const feature = json[0].uri.split('/').reverse()[0];
-    jsonNames[feature] = file;
-    cukeMap[feature] = json;
-    featureToFileMap[feature] = file;
+  const json = JSON.parse(
+    fs.readFileSync(path.join(jsonPath, file)).toString()
+  );
+  const feature = json[0].uri.split('/').reverse()[0];
+  jsonNames[feature] = file;
+  cukeMap[feature] = json;
+  featureToFileMap[feature] = file;
 });
 
 
 const failingFeatures = fs.readdirSync(path.join(screenshotsPath));
 failingFeatures.forEach(feature => {
-    const screenshots = fs.readdirSync(path.join(screenshotsPath, feature));
-    screenshots.forEach(screenshot => {
-        const scenarioName = screenshot.split('--')[1].split('(failed)')[0].trim();
-        const myScenario = cukeMap[feature][0].elements.find(
-            e => e.name === scenarioName
-        );
-        const myStep = myScenario.steps.find(
-            step => step.result.status !== 'passed'
-        );
-        const data = fs.readFileSync(
-            path.join(screenshotsPath, feature, screenshot)
-        );
-        if (data) {
-            const base64Image = Buffer.from(data, 'binary').toString('base64');
-            myStep.embeddings = [];
-            myStep.embeddings.push({
-                data: base64Image,
-                mime_type: 'image/png'
-            });
-        }
-        fs.writeFileSync(
-            path.join(jsonPath, jsonNames[feature]),
-            JSON.stringify(cukeMap[feature], null, 2)
-        );
-    });
+  const screenshots = fs.readdirSync(path.join(screenshotsPath, feature));
+  screenshots.forEach(screenshot => {
+    const scenarioName = screenshot.split('--')[1].split('(failed)')[0].trim();
+    const myScenario = cukeMap[feature][0].elements.find(
+      e => e.name === scenarioName
+    );
+    const myStep = myScenario.steps.find(
+      step => step.result.status !== 'passed'
+    );
+    const data = fs.readFileSync(
+      path.join(screenshotsPath, feature, screenshot)
+    );
+    if (data) {
+      const base64Image = Buffer.from(data, 'binary').toString('base64');
+      myStep.embeddings = [];
+      myStep.embeddings.push({
+        data: base64Image,
+        mime_type: 'image/png'
+      });
+    }
+    fs.writeFileSync(
+      path.join(jsonPath, jsonNames[feature]),
+      JSON.stringify(cukeMap[feature], null, 2)
+    );
+  });
 });
 
 report.generate({
-    jsonDir: 'reports/json',
-    reportPath: 'reports/html',
-    pageFooter: '<div></div>',
-    openReportInBrowser: false,
-    displayDuration: true,
-    displayReportTime: true,
-    hideMetadata: true,
-    /**
+  jsonDir: 'reports/json',
+  reportPath: 'reports/html',
+  pageFooter: '<div></div>',
+  openReportInBrowser: false,
+  displayDuration: true,
+  displayReportTime: true,
+  hideMetadata: true,
+  /**
      *customData: {
         title: 'Run info',
         data: [

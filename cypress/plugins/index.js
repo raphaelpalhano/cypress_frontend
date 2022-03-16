@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 const cucumber = require('cypress-cucumber-preprocessor').default;
-const { profileEnd } = require('console');
 const fs = require('fs-extra');
 const path = require('path');
 
