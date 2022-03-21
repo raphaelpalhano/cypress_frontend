@@ -8,7 +8,14 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
-reports/html/
+#reports
+reports/html/assets
+reports/html/index.html
+reports/html/*.js
+
+reports/json/*.json
+reports/junit/*.xml
+
 
 # Microbundle cache
 .rpt2_cache/

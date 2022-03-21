@@ -2,7 +2,7 @@
 
 # Estrutura do framework
 
-<p align="center">
+<p >
     <img src="workflow/flow_frontend.drawio.png" alt="imagem nao existe">
  </p>
 

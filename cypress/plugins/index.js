@@ -10,6 +10,7 @@ function getConfigurationByFile(file) {
 }
 
 module.exports = (on, config) => {
+
   on('file:preprocessor', cucumber());
   on('before:browser:launch', (browser = {}, launchOptions) => {
     if (browser.family === 'chromium' && browser.name !== 'electron') {

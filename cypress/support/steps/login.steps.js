@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 import {Before, Given, And} from 'cypress-cucumber-preprocessor/steps';
 import {LoginPage} from '../pageobject/pages/LoginPage';
 
@@ -11,6 +9,10 @@ import {LoginPage} from '../pageobject/pages/LoginPage';
 Before({ tags: '@tag'}, () => {
   //cy.setLocalStorage('acessoRetaguarda', 'true');
   //cy.setCookie('version', 'v6-beta');
+  //cy.on('window:load').as('window');
+  //if(cy.wait('@window')){
+  //cy.reload();
+  //}
   console.log(`before scenarios with tag '@tag'`);
 });
 
