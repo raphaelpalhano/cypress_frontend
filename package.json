@@ -7,14 +7,14 @@
     "cy:firefox": "cypress run --browser firefox",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:tags": "cypress-tags run -e",
+    "cy:tags": "cypress-tags run -e TAGS=@developed",
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
     "lint": "eslint --fix --ext .js,.jsx,.ts .",
     "code:prettier": "prettier --check \"**/*.js*\""
   },
   "keywords": [],
-  "author": "Leonardo Kartabil",
+  "author": "Raphael Angel",
   "license": "ISC",
   "devDependencies": {
     "cypress-localstorage-commands": "^1.7.0",
@@ -41,6 +41,7 @@
     "cypress-cucumber-preprocessor": "^4.3.1",
     "faker-br": "^0.4.1",
     "jsonschema": "^1.4.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
   }
 }

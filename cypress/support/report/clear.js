@@ -1,4 +1,4 @@
-var rimraf = require('rimraf');
+const rimraf = require('rimraf');
 
 rimraf.sync('reports/json/*');
 rimraf.sync('reports/html/*');

@@ -7,6 +7,7 @@ import {LoginPage} from '../pageobject/pages/LoginPage';
  */
 
 Before({ tags: '@tag'}, () => {
+
   //cy.setLocalStorage('acessoRetaguarda', 'true');
   //cy.setCookie('version', 'v6-beta');
   //cy.on('window:load').as('window');
