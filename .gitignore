@@ -8,10 +8,13 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
+
+
 #reports
 reports/html/assets
 reports/html/index.html
 reports/html/*.js
+
 
 reports/json/*.json
 reports/junit/*.xml

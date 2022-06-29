@@ -19,17 +19,22 @@ the multiple-cucumber-html-processor - docs: http://cypress.io/guides/references
 * To execute this script you can use the command 'npm run cy:report' or 'node ./cypress/support/reporter.js'
 */
 
+const checkIfHaveDir = (pathDir) => {
+  if(!fs.existsSync(pathDir)){
+    fs.mkdirSync(pathDir, {
+      recursive: true
+    });
+  }
+};
+
+
 const report = require('multiple-cucumber-html-reporter');
 const fs = require('fs');
 const path = require('path');
 const pathreports = 'reports';
 const cucumberJsonDir = `${pathreports}/json`;
-const screenshotsDir = `${pathreports}/screenshots/spec/`; 
-if(!fs.existsSync(screenshotsDir)){
-  fs.mkdirSync(screenshotsDir, {
-    recursive: true
-  });
-}
+const screenshotsDir = `${pathreports}/screenshots`; 
+checkIfHaveDir(screenshotsDir);
 const jsonPath = path.join(__dirname, '../../../', cucumberJsonDir);
 const screenshotsPath = path.join(__dirname, '../../../', screenshotsDir);
 const files = fs.readdirSync(jsonPath);
@@ -37,45 +42,53 @@ const jsonNames = {};
 const cukeMap = {};
 const featureToFileMap = {};
 
-files.forEach(file => {
-  const json = JSON.parse(
-    fs.readFileSync(path.join(jsonPath, file)).toString()
-  );
-  const feature = json[0].uri.split('/').reverse()[0];
-  jsonNames[feature] = file;
-  cukeMap[feature] = json;
-  featureToFileMap[feature] = file;
-});
 
 
-const failingFeatures = fs.readdirSync(path.join(screenshotsPath));
-failingFeatures.forEach(feature => {
-  const screenshots = fs.readdirSync(path.join(screenshotsPath, feature));
-  screenshots.forEach(screenshot => {
-    const scenarioName = screenshot.split('--')[1].split('(failed)')[0].trim();
-    const myScenario = cukeMap[feature][0].elements.find(
-      e => e.name === scenarioName
-    );
-    const myStep = myScenario.steps.find(
-      step => step.result.status !== 'passed'
-    );
-    const data = fs.readFileSync(
-      path.join(screenshotsPath, feature, screenshot)
-    );
-    if (data) {
-      const base64Image = Buffer.from(data, 'binary').toString('base64');
-      myStep.embeddings = [];
-      myStep.embeddings.push({
-        data: base64Image,
-        mime_type: 'image/png'
-      });
+const setupReport = () => {
+  files.forEach(file => {
+    if(file.endsWith('json')){
+      const json = JSON.parse(
+        fs.readFileSync(path.join(jsonPath, file)).toString()
+      );
+      const feature = json[0].uri.split('/').reverse()[0];
+      jsonNames[feature] = file;
+      cukeMap[feature] = json;
+      featureToFileMap[feature] = file;
     }
-    fs.writeFileSync(
-      path.join(jsonPath, jsonNames[feature]),
-      JSON.stringify(cukeMap[feature], null, 2)
-    );
+   
+  });  
+  const failingFeatures = fs.readdirSync(path.join(screenshotsPath));
+  failingFeatures.forEach(feature => {
+    const screenshots = fs.readdirSync(path.join(screenshotsPath, feature));
+    screenshots.forEach(screenshot => {
+      const scenarioName = screenshot.split('--')[1].split('(failed)')[0].trim();
+      const myScenario = cukeMap[feature][0].elements.find(
+        e => e.name === scenarioName
+      );
+      const myStep = myScenario.steps.find(
+        step => step.result.status !== 'passed'
+      );
+      const data = fs.readFileSync(
+        path.join(screenshotsPath, feature, screenshot)
+      );
+      if (data) {
+        const base64Image = Buffer.from(data, 'binary').toString('base64');
+        myStep.embeddings = [];
+        myStep.embeddings.push({
+          data: base64Image,
+          mime_type: 'image/png'
+        });
+      }
+      fs.writeFileSync(
+        path.join(jsonPath, jsonNames[feature]),
+        JSON.stringify(cukeMap[feature], null, 2)
+      );
+    });
   });
-});
+};
+
+
+setupReport();
 
 report.generate({
   jsonDir: 'reports/json',
@@ -98,3 +111,7 @@ report.generate({
       }
     */
 });
+
+
+
+

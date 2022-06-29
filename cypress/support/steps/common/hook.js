@@ -2,12 +2,13 @@
 
 import {Before, After} from 'cypress-cucumber-preprocessor/steps';
 
-Before(() => {
 
-  console.log('before all, this!');
+Before(() => {
+  cy.log('Start feature');
 
 });
 
 After(() => {
-  console.log('After each, this!');
+  cy.log('Finish feature');
+  
 });
