@@ -22,13 +22,6 @@ Cypress.Commands.add('generateFixture', (fileName,numTimes) => {
   });
 });
 
-Cypress.Commands.add('cyCheckFile', (pathDir) => {
-  if(!fs.existsSync(pathDir)){
-    fs.mkdirSync(pathDir, {
-      recursive: true
-    });
-  }
-});
 
 
 
