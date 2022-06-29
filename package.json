@@ -11,7 +11,8 @@
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
     "lint": "eslint --fix --ext .js,.jsx,.ts .",
-    "code:prettier": "prettier --check \"**/*.js*\""
+    "code:prettier": "prettier --check \"**/*.js*\"",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Raphael Angel",
@@ -22,7 +23,7 @@
     "eslint-plugin-cypress": "^2.12.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^10.0.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^12.3.4",
     "mocha-junit-reporter": "^2.0.2",
     "prettier": "^1.19.1"
