@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier-format": "prettier --config .prettierrc '**/*.js' --write",
     "cy:firefox": "cypress run --browser firefox",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:tags": "cypress-tags run -e TAGS=@developed",
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
-    "lint": "eslint --fix --ext .js,.jsx,.ts .",
+    "lint": "eslint . --ext .js",
     "code:prettier": "prettier --check \"**/*.js*\"",
     "prepare": "husky install"
   },
@@ -24,7 +25,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^10.0.0",
     "husky": "^8.0.0",
-    "lint-staged": "^12.3.4",
+    "lint-staged": "^12.5.0",
     "mocha-junit-reporter": "^2.0.2",
     "prettier": "^1.19.1"
   },
@@ -44,5 +45,12 @@
     "multiple-cucumber-html-reporter": "^1.21.4",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm prettier-format",
+      "npm run lint --fix",
+      "npm run cy:run"
+    ]
   }
 }
