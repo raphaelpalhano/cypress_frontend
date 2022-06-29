@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 export default class BasePage {
-
   static getElement(element, index = undefined) {
     let elem;
     if (typeof index !== 'undefined' || index > 0) {
@@ -75,59 +74,62 @@ export default class BasePage {
   }
 
   static verifyIfElementIsHidden(element) {
-
     this.getElement(element).should('not.be.visible', { timeout: Cypress.env('global_timeout') });
   }
 
   static async waitElementAndSelectOption(element, option) {
-    try{
-      return await this.getElement(element).should('be.visible').select(option);
-    }catch(error){
+    try {
+      return await this.getElement(element)
+        .should('be.visible')
+        .select(option);
+    } catch (error) {
       throw new Error(`element not be visible. ${error.message}`);
     }
-
   }
 
   static validateFirstElementOfArray(array, value) {
-    cy.get(array).first().should('contain', value);
+    cy.get(array)
+      .first()
+      .should('contain', value);
   }
 
-  static clickInAllElementsInList(elementList){
-    cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each($el => {
+  static clickInAllElementsInList(elementList) {
+    cy.get(elementList, { timeout: Cypress.env('global_timeout') }).each(($el) => {
       cy.wrap($el).click();
     });
   }
 
-  static clickInOneElementInList(elementList, value){
-    cy.get(elementList).should('be.visible', { timeout: Cypress.env('global_timeout')}).each($el => {
-      if(cy.wrap($el).should('contain', value)){
-        cy.get($el).click();
-
-      };
-    });
-  }
-
-
-  static typeForm(element, inputElements, values){
-    cy.get(element).should('be.visible', { timeout: Cypress.env('global_timeout')}).within(($form => {
-      inputElements.forEach($el => {
-        cy.get($el).type(cy.wrap(values).each($v));
+  static clickInOneElementInList(elementList, value) {
+    cy.get(elementList)
+      .should('be.visible', { timeout: Cypress.env('global_timeout') })
+      .each(($el) => {
+        if (cy.wrap($el).should('contain', value)) {
+          cy.get($el).click();
+        }
       });
-
-    }));
   }
 
-  static getListOfTextsElements(elementList, nameEnvList){
+  static typeForm(element, inputElements, values) {
+    cy.get(element)
+      .should('be.visible', { timeout: Cypress.env('global_timeout') })
+      .within(($form) => {
+        inputElements.forEach(($el) => {
+          cy.get($el).type(cy.wrap(values).each($v));
+        });
+      });
+  }
+
+  static getListOfTextsElements(elementList, nameEnvList) {
     let texts = new Array();
-    cy.get(elementList).should('contain.html', { timeout: Cypress.env('global_timeout')}).each($el => {
-      texts.push(cy.wrap($el).invoke('text'));
-    });
-    if(nameEnvList){
+    cy.get(elementList)
+      .should('contain.html', { timeout: Cypress.env('global_timeout') })
+      .each(($el) => {
+        texts.push(cy.wrap($el).invoke('text'));
+      });
+    if (nameEnvList) {
       Cypress.env(nameEnvList, texts);
     }
 
     return texts;
   }
-
 }
-

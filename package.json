@@ -11,7 +11,7 @@
     "cy:tags": "cypress-tags run -e TAGS=@developed",
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
-    "lint": "eslint . --ext .js",
+    "lint": "eslint . --ext .js --fix",
     "code:prettier": "prettier --check \"**/*.js*\"",
     "prepare": "husky install"
   },
