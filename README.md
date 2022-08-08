@@ -3,9 +3,8 @@
 # Estrutura do framework
 
 <p >
-    <img src="workflow/flow_frontend.drawio.png" alt="imagem nao existe">
+    <img src="flows/flow_frontend.drawio.png" alt="imagem nao existe">
  </p>
-
 
 ## 1. Integration/spec/.feature:Gherkin
 
